@@ -1,6 +1,0 @@
-projectKey=testing1234
-serverUrl=http://0.0.0.0:9001
-serverVersion=8.9.9.56886
-dashboardUrl=http://0.0.0.0:9001/dashboard?id=testing1234
-ceTaskId=AYOC5U-HxZkFQIRwPjlv
-ceTaskUrl=http://0.0.0.0:9001/api/ce/task?id=AYOC5U-HxZkFQIRwPjlv
