@@ -1,0 +1,42 @@
+# Custom Quality Gate sonarqube using Golang
+
+This tools for custom quality gate when scanning sast in sonarqube. this tools can running on jenkins , bamboo , or other ci/cd
+
+# Requirement
+- java-11-openjdk
+- sonar-scanner (included )
+
+# Execute in bash 
+
+## sample1 using flag
+
+```bash
+go-sonar-scanner --baseurl="http://0.0.0.0:9001" --auth=flag --username=<USERNAME> --password=<PASSWORD> --projectKey=testing123 --qualityGate="sample-qg-1" --args="-Dsonar.login=<TOKEN> -Dsonar.projectKey=farm-app"
+```
+
+## sample1 using env
+```bash
+export sonaruser=<USERNAME>
+export sonarpass=<PASSWORD>
+go-sonar-scanner --baseurl="http://0.0.0.0:9001" --auth=env --projectKey=testing123 --qualityGate="sample-qg-1" --args="-Dsonar.login=<TOKEN> -Dsonar.projectKey=farm-app"
+```
+
+## sample running on jenkins
+
+```groovy
+pipeline {
+	agent any 
+	stages {
+		stage("Testing") {
+			steps {
+				script {
+                    go-sonar-scanner --baseurl="http://0.0.0.0:9001" --auth=flag --username=<USERNAME> --password=<PASSWORD> --projectKey=testing123 --qualityGate="sample-qg-1" --args="-Dsonar.login=<TOKEN> -Dsonar.projectKey=farm-app"
+                }
+            }
+        }
+    }
+}
+```
+
+# FRIENDS :D
+@agambewe
