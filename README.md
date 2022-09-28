@@ -14,14 +14,14 @@ This tools for custom quality gate when scanning sast in sonarqube. this tools c
 go-sonar-scanner --baseurl="http://0.0.0.0:9001" --auth=flag --username=<USERNAME> --password=<PASSWORD> --projectKey=testing123 --qualityGate="sample-qg-1" --args="-Dsonar.login=<TOKEN> -Dsonar.projectKey=farm-app"
 ```
 
-## sample1 using env
+## sample2 using env
 ```bash
 export sonaruser=<USERNAME>
 export sonarpass=<PASSWORD>
 go-sonar-scanner --baseurl="http://0.0.0.0:9001" --auth=env --projectKey=farm-app --qualityGate="sample-qg-1" --args="-Dsonar.login=<TOKEN> -Dsonar.projectKey=farm-app"
 ```
 
-## sample running on jenkins
+## sample3 running on jenkins
 
 ```groovy
 pipeline {
