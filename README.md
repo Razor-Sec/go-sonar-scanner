@@ -6,6 +6,14 @@ This tools for custom quality gate when scanning sast in sonarqube. this tools c
 - java-11-openjdk
 - sonar-scanner (included )
 
+
+# Installation
+```bash
+mkdir /opt/go-sonar
+echo "export PATH=PATH:/opt/go-sonar" > ~/.bashrc
+which go-sonar-scanner
+```
+
 # Execute in bash 
 
 ## sample1 using flag
