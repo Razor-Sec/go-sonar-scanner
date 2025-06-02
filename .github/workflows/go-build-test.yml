@@ -7,8 +7,7 @@ on:
 jobs:
   build:
     name: Build with Go on self-hosted runner
-    runs-on: self-hosted
-      labels: local-docker
+    runs-on: local-docker
 
     steps:
       - name: Checkout code
