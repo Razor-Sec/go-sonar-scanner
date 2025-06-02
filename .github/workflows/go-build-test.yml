@@ -1,0 +1,30 @@
+name: Test Go Build on Self-Hosted Runner
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build with Go on self-hosted runner
+    runs-on: self-hosted
+    labels: [Linux, local-docker]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.18'
+
+      - name: Cek versi
+        run: go version
+
+      - name: Build the project
+        run: go build -v ./...
+
+      - name: Run the binary
+        run: echo runn || echo "Binary executed"
+
